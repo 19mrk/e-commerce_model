@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BS ex</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      .fixed-font {
+    font-size: 2rem;  /* or use rem: 1rem */
+  }
+  .nav-link{
+     border: none;
+      transition: all 0.3s;
+  }
+  .nav-link:hover {
+     background-color: gray; /* green like your image */
+      color: white;
+  }
+  
+  .offcanvas-end {
+      background-color: rgba(255, 255, 255, 0.90); /* Transparent white */
+      backdrop-filter: blur(5px); /* Optional blur effect */
+    }
+    button{
+      margin-top: 40px;
+      padding: 15px 15px 15px 15px;
+     border: 2px solid gray;
+     transition: all 0.3s;
+      font-weight: 1000;
+      color: gray;
+      background-color: rgb(232, 232, 232);
+    }
+    button:hover {
+      background-color: gray;
+      color: white;
+    }
+    .card {
+  border-radius: 20px;
+  background-color: #fbe9e7;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: auto; /* default */
+}
+
+/* Mobile: max 2 cards per row */
+@media (max-width: 575.98px) {
+  .card {
+    height: 300px;
+  }
+}
+
+/* Tablet: 3 cards per row */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .card {
+    height: 350px;
+  }
+}
+
+/* Laptop/Desktop: 4 cards per row */
+@media (min-width: 992px) {
+  .card {
+    height: 400px;
+  }
+}
+
+
+    .card img {
+      border-radius: 10px;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .card .btn-custom {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  background-color: #a5d6a7;
+  color: black;
+  border: 1px solid #81c784;
+}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-body z-1"  style="font-size: medium; font-weight:bold; height:100px; ">
+  <div class="container-fluid">
+      <img src="E:\bootstrap\W (2).png" alt="Logo" width="130" height="100" class="position-absolute top-0 start-0" style=" padding-right:1px; max-width:100%; max-height:100%;">
+    
+ <button class="navbar-toggler position-absolute top-0 end-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Offcanvas Menu (Right Side) -->
+    <div class="offcanvas offcanvas-end"  tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body  ">
+        <ul class="navbar-nav  position-absolute start-50 translate-middle-x " >
+          <li class="nav-item ">
+            <a class="nav-link" aria-current="page" href="index.html">Home  &raquo;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us  &raquo;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback  &raquo;</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us 
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
+              <li><a class="dropdown-item" href="#">Process  &raquo;</a></li>
+              <li><a class="dropdown-item" href="#">Team  &raquo;</a></li>
+              <li><a class="dropdown-item" href="#">Location  &raquo;</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="row g-4">
+
+    <!-- Repeat this column 4, 3, or 2 times -->
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="roundchopper1.jpg" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom">Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate above block for more cards -->
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="juice1.png" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom container-fluid">Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="back3.png" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom">Details →</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="back5.png" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom">Details →</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="garva2.jpg" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom">Details →</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="trays.png" class="card-img-top" alt="Tea Cup">
+        <div class="card-body">
+          <h5 class="card-title">Tea Cup</h5>
+          <a href="#" class="btn btn-custom">Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more card blocks as needed -->
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

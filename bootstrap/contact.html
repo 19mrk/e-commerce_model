@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Avoid horizontal scroll */
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+
+}
+body.dark-mode{
+  background-color: #8c8d8c;
+  color: white;
+}
+.chat-message {
+      background: #f1f1f1;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      max-width: 80%;
+    }
+.category-card {
+  background-color: #f5e3ba;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+h5.dark-mode{
+  color:white
+}
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category-card h5 {
+  margin-top: 15px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 600;
+  color: #222;
+}
+    .nav-link{
+      color: #efbd50;
+    }
+    .nav-link:hover{
+      font-weight: bolder;
+    }
+    .hero {
+      background: conic-gradient( from 180deg at center, #06402B , #172808, #A07A2B,#06402B);
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    h2{
+       text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+       margin-top: 20px;
+    }
+    .btn{
+        color: #ffffff;
+        background-color: #A07A2B;
+        margin-top:5px;
+    }
+    .btn:hover{
+        background-color:  #06402B;
+        color: white;
+    }
+
+    .feedback-form {
+      background: rgba(255, 239, 203, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 420px;
+    }
+    .login-form h2 {
+      font-weight: 700;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #333;
+    }
+    .btn-primary {
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #104a26, #A07A2B);
+      border: none;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    }
+    .form-text {
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
+    label {
+      font-weight: 500;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🛍️ ShopSmart</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link data-bs-toggle="tooltip" data-bs-placement="top" title="this is home page"" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link data-bs-toggle="tooltip" data-bs-placement="top" title="this is category's list"" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link data-bs-toggle="tooltip" data-bs-placement="top" title="this is contact page"" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex me-3">
+          <input class="form-control me-2" type="search" placeholder="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <a class="btn btn-outline-warning me-2" href="login.html">Login</a>
+        <a class="btn  btn-outline-warning me-2" href="cart.html">Cart 🛒</a>
+        <button class="btn btn-info btn-outline-warning me-2" data-bs-toggle="offcanvas" data-bs-target="#helpCenter">
+          💬 Help Center
+        </button> 
+        <button class="btn btn-outline-warning me-2" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+
+        </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container contact-section">
+    <h2 class="text-center contact-heading">Contact Us</h2>
+
+    <div class="row">
+      <!-- Feedback Form -->
+      <div class="col-md-6">
+        <h4>Send Feedback</h4>
+      <div class="feedback-form">
+    <form>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Mobile Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your mobile number">
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" />
+        </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+      </div>
+
+      <!-- Contact Info & Email -->
+      <div class="col-md-6 mt-4 mt-md-0">
+        <h4>Email Us</h4>
+        <p>
+          <strong>Email:</strong> <a href="mailto:support@example.com">support@xyz.com</a><br />
+          <strong>Phone:</strong> +91-98765-43210<br />
+          <strong>Address:</strong> 123,Street,City, India
+        </p>
+
+        <!-- Embedded Google Map -->
+        <div class="mt-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1161003507!2d72.7411010420173!3d19.082197838869098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce032e45ad6d%3A0x4e71a6a3e28de5ad!2sMumbai!5e0!3m2!1sen!2sin!4v1616743089136!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="helpCenter">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Help Center</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="helpTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faqs" type="button">FAQs</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#chat" type="button">Chat</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact" type="button">Contact</button>
+      </li>
+     
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content pt-3">
+      <!-- FAQs Tab -->
+      <div class="tab-pane fade show active" id="faqs" role="tabpanel">
+        <h6>📝 Frequently Asked Questions</h6>
+        <p><strong>Q:</strong> How do I track my order?</p>
+        <p><strong>A:</strong> Go to "My Orders" > "Track Shipment"</p>
+        <hr>
+        <p><strong>Q:</strong> Can I return a product?</p>
+        <p><strong>A:</strong> Yes, within 7 days of delivery.</p>
+      </div>
+
+      <!-- Chat Tab -->
+      <div class="tab-pane fade" id="chat" role="tabpanel">
+        <h6>🤖 Chatbot Assistant</h6>
+        <div class="chat-message">Hello! How can I help you today?</div>
+        <input type="text" class="form-control mt-2" placeholder="Type your question..." onkeydown="if(event.key==='Enter'){sendChatMessage(this);}">
+      </div>
+
+      <!-- Contact Form Tab -->
+      <div class="tab-pane fade" id="contact" role="tabpanel">
+        <h6>📧 Contact Us</h6>
+        <form onsubmit="submitContactForm(event)">
+          <div class="mb-2">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Support Links Tab -->
+      
+    </div>
+  </div>
+</div>
+
+  <script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Optional: save mode to localStorage
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  }
+
+    // Feedback form validation and alert
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for your feedback!");
+      this.reset();
+    });
+      window.onload = () => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  };
+
+        function sendChatMessage(input) {
+    const message = input.value.trim();
+    if (!message) return;
+    const chatBox = input.previousElementSibling;
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message text-end bg-primary text-white ms-auto';
+    userMsg.innerText = message;
+    chatBox.insertAdjacentElement('afterend', userMsg);
+    input.value = '';
+  }
+
+  function submitContactForm(e) {
+    e.preventDefault();
+    alert('Your message has been sent!');
+    e.target.reset();
+  }
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
